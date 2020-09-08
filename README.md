@@ -11,6 +11,7 @@ SSToastMessage
 
 
 SSToastMessage is written in SwiftUI. It will add toast, alert, and floating message view over the top of any view. It is intended to be simple, lightweight, and easy to use. It will be a popup with a single line of code.
+
 Screenshots
 ---------
 ![SSToastMessage Screenshots](screen_shots.png)
