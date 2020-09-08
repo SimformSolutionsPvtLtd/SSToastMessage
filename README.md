@@ -7,7 +7,7 @@ SSToastMessage
 SSToastMessage is written in SwiftUI. It will add toast, alert, and floating message view over the top of any view. It is intended to be simple, lightweight, and easy to use. It will be a popup with a single line of code.
 Screenshots
 ---------
-![Toast-Swift Screenshots](toast_swift_screenshot.jpg)
+![SSToastMessage Screenshots](screen_shots.png)
 
 # Usage
 1. Put all your body code into a ZStack, VStack, or HStack. 
@@ -19,54 +19,54 @@ Basic Examples
 ---------
 ```swift
 struct ContentView: View {
-@State var showToast = false
-var body: some View {
-VStack {
-// your screen main stack
-Button(action: {
-self.showToast.toggle()
-}) {
-Text("Show Toast")
-.foregroundColor(.black)
-}
-}
-.present(isPresented: self.$showToast, type: .toast, position: .top) {
-/// create your own view for toast
-self.createTopToastView()
-}
-}
+    @State var showToast = false
+    var body: some View {
+        VStack {
+            // your screen main stack
+            Button(action: {
+                self.showToast.toggle()
+            }) {
+                Text("Show Toast")
+                    .foregroundColor(.black)
+            }
+        }
+        .present(isPresented: self.$showToast, type: .toast, position: .top) {
+           /// create your own view for toast
+            self.createTopToastView()
+        }
+    }
+    
+    func createTopToastView() -> some View {
+        VStack {
+            Spacer(minLength: 20)
+            HStack() {
+                Image("mike")
+                    .resizable()
+                    .aspectRatio(contentMode: ContentMode.fill)
+                    .frame(width: 50, height: 50)
+                    .cornerRadius(25)
 
-func createTopToastView() -> some View {
-VStack {
-Spacer(minLength: 20)
-HStack() {
-Image("mike")
-.resizable()
-.aspectRatio(contentMode: ContentMode.fill)
-.frame(width: 50, height: 50)
-.cornerRadius(25)
+                VStack(alignment: .leading, spacing: 2) {
+                    HStack {
+                        Text("Mike")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                        Spacer()
+                        Text("10:10")
+                            .font(.system(size: 12))
+                            .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9))
+                    }
 
-VStack(alignment: .leading, spacing: 2) {
-HStack {
-Text("Mike")
-.foregroundColor(.white)
-.fontWeight(.bold)
-Spacer()
-Text("10:10")
-.font(.system(size: 12))
-.foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9))
-}
-
-Text("Hey, Don't miss the WWDC on tonight at 10 AM PST.")
-.lineLimit(2)
-.font(.system(size: 14))
-.foregroundColor(.white)
-}
-}.padding(15)
-}
-.frame(width: UIScreen.main.bounds.width, height: 110)
-.background(Color(red: 0.85, green: 0.65, blue: 0.56))
-}
+                    Text("Hey, Don't miss the WWDC on tonight at 10 AM PST.")
+                        .lineLimit(2)
+                        .font(.system(size: 14))
+                        .foregroundColor(.white)
+                }
+            }.padding(15)
+        }
+        .frame(width: UIScreen.main.bounds.width, height: 110)
+        .background(Color(red: 0.85, green: 0.65, blue: 0.56))
+    }
 }
 ```
 Way easy to customize!
