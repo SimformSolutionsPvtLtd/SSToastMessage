@@ -69,20 +69,31 @@ struct ContentView: View {
     }
 }
 ```
+
+<br> </br>
+<p align="center">
+  <img src="demo.gif" />
+</p>
+<br> </br>
+
 Way easy to customize!
 ---------
 ### Required parameters 
-`presented` - binding to determine if the messag view should be seen on screen or hidden     
-`view` - view you want to display on your messag view  
+`presented` - binding to determine if the message view should be seen on-screen or hidden     
+`view` - view you want to display on your message view 
 
 ### Available customizations - optional parameters    
-`type` - alert, toast and float   
-`position` - top or bottom (for default case it just determines animation direction)  
-`animation` - custom animation for message view sliding onto screen  
-`autohideDuration` - time after which message view should disappear  
-`closeOnTap` - on message view tap it should disappear  
-`onTap` - on message view tap perform any action or navigation.                      
-`closeOnTapOutside` - on outside tap message view should disappear
+
+Element | Declaration | Description
+--------|-----------|-----
+type | `type: MessageType` | set type of view alert, toast and float.
+position | `position: Position` |  top or bottom (for default case it just determines animation direction).
+animation | `animation: Animation` | custom animation for message view sliding onto screen.
+autohideDuration | `autohideDuration: Double?` |  time after which message view should disappear.
+closeOnTap | `closeOnTap: Bool` | on message view tap it should disappear.
+onTap | `onTap: () -> Void` | on message view tap perform any action or navigation.
+closeOnTapOutside | `closeOnTapOutside: Bool` | on outside tap message view should disappear.
+
 
 See the demo project for more examples.
 
@@ -92,12 +103,13 @@ Setup Instructions
 ------------------
 To integrate Toast-Swift into your Xcode project using CocoaPods, specify it in your `Podfile`:
 ```ruby
-pod 'SSToastMessage', '~> 0.0.1'
+pod 'SSToastMessage', '~> 1.0.0'
 ```
 and in your code add `import SSToastMessage`.
+
 [Swift Package Manager](https://swift.org/package-manager/)
 ------------------
-When using Xcode 11 or later, you can install `SSToastMessage` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
+When using Xcode 11 or later, you can install `SSToastMessage` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
 
 
 ## Manually
