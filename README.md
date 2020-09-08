@@ -1,8 +1,14 @@
 SSToastMessage
 =============
-[![Build Status](https://travis-ci.org/scalessec/SSToastMessage.svg?branch=master)](https://travis-ci.org/scalessec/SSToastMessage)
+
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/SSToastMessage.svg)](http://cocoadocs.org/docsets/SSToastMessage)
 [![Platform](https://img.shields.io/cocoapods/p/SSToastMessage.svg?style=flat)](http://cocoapods.org/pods/SSToastMessage)
+[![License](https://img.shields.io/cocoapods/l/SSToastMessage.svg?style=flat)](https://cocoapods.org/pods/SSToastMessage)
+[![swiftUI](https://img.shields.io/badge/-swiftUI-blue)](https://developer.apple.com/documentation/swiftui)
+[![Swift Version][swift-image]][swift-url]
+[![PRs Welcome][PR-image]][PR-url]
+
+
 
 SSToastMessage is written in SwiftUI. It will add toast, alert, and floating message view over the top of any view. It is intended to be simple, lightweight, and easy to use. It will be a popup with a single line of code.
 Screenshots
@@ -143,3 +149,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+[PR-image]:https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat
+[PR-url]:http://makeapullrequest.com
+[swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
+[swift-url]: https://swift.org/
