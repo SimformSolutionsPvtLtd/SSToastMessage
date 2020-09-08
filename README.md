@@ -9,6 +9,31 @@ Screenshots
 ---------
 ![SSToastMessage Screenshots](screen_shots.png)
 
+
+Setup Instructions
+------------------
+[CocoaPods](http://cocoapods.org)
+------------------
+To integrate Toast-Swift into your Xcode project using CocoaPods, specify it in your `Podfile`:
+```ruby
+pod 'SSToastMessage', '~> 1.0.0'
+```
+and in your code add `import SSToastMessage`.
+
+[Swift Package Manager](https://swift.org/package-manager/)
+------------------
+When using Xcode 11 or later, you can install `SSToastMessage` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
+
+
+## Manually
+
+1. Add `MessageView.swift`, `DispatchWorkHolder.swift` and `View+Extension.swift` to your project.
+2. Grab yourself a cold 🍺.
+
+## Requirements
+* iOS 13+
+* Xcode 11+
+
 # Usage
 1. Put all your body code into a ZStack, VStack, or HStack. 
 2. Add a binding bool to control popup presentation state
@@ -96,30 +121,6 @@ closeOnTapOutside | `closeOnTapOutside: Bool` | on outside tap message view shou
 
 
 See the demo project for more examples.
-
-Setup Instructions
-------------------
-[CocoaPods](http://cocoapods.org)
-------------------
-To integrate Toast-Swift into your Xcode project using CocoaPods, specify it in your `Podfile`:
-```ruby
-pod 'SSToastMessage', '~> 1.0.0'
-```
-and in your code add `import SSToastMessage`.
-
-[Swift Package Manager](https://swift.org/package-manager/)
-------------------
-When using Xcode 11 or later, you can install `SSToastMessage` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
-
-
-## Manually
-
-1. Add `MessageView.swift`, `DispatchWorkHolder.swift` and `View+Extension.swift` to your project.
-2. Grab yourself a cold 🍺.
-
-## Requirements
-* iOS 13+
-* Xcode 11+
 
 ## MIT License
 
