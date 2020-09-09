@@ -106,7 +106,7 @@ struct ContentView: View {
 
 <br> </br>
 <p align="center">
-  <img src="demo.gif" width="20%" height="20%"/>
+  <img src="demo.gif" width="40%" height="40%"/>
 </p>
 <br> </br>
 
