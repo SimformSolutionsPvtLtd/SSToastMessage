@@ -1,3 +1,5 @@
+<a href="https://www.simform.com/"><img src="https://github.com/SimformSolutionsPvtLtd/SSToastMessage/blob/master/simformBanner.png"></a>
+
 SSToastMessage
 =============
 
@@ -104,7 +106,7 @@ struct ContentView: View {
 
 <br> </br>
 <p align="center">
-  <img src="demo.gif" />
+  <img src="demo.gif" width="40%" height="40%"/>
 </p>
 <br> </br>
 
@@ -128,6 +130,9 @@ closeOnTapOutside | `closeOnTapOutside: Bool` | on outside tap message view shou
 
 
 See the demo project for more examples.
+
+<h3><a href="https://github.com/SimformSolutionsPvtLtd"><u>🗂 Check out our other libraries→</u></a></h3>
+
 
 ## MIT License
 
