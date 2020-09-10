@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
- 	s.name                   = 'SSToastMessage'
+ 	  s.name                   = 'SSToastMessage'
   	s.version                = '1.0.0'
   	s.platform               = :ios
     s.swift_versions         = '5.0'
@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
                                DESC
     
     s.homepage               = 'https://github.com/SimformSolutionsPvtLtd/SSToastMessage'
-    # s.screenshots           = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license                = { :type => 'MIT', :file => 'LICENSE' }
     s.author                 = { 'Ankit Panchal' => 'ankit.p@simformsolutions.com' }
     s.source                 = { :git => 'https://github.com/SimformSolutionsPvtLtd/SSToastMessage.git', :tag => s.version.to_s }
@@ -31,8 +30,5 @@ Pod::Spec.new do |s|
     s.source_files           = 'Sources/**/*.swift'
     s.requires_arc           = true
     s.frameworks             = ['SwiftUI']
-    # s.resource_bundles = {
-    #   'SSToastMessage' => ['SSToastMessage/Assets/*.png']
-    # }
     
 end
