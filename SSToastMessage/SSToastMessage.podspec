@@ -21,13 +21,12 @@ Pod::Spec.new do |s|
     s.homepage               = 'https://github.com/SimformSolutionsPvtLtd/SSToastMessage'
     s.license                = { :type => 'MIT', :file => 'LICENSE' }
     s.author                 = { 'Ankit Panchal' => 'ankit.p@simformsolutions.com' }
-    s.source                 = { :git => 'https://github.com/SimformSolutionsPvtLtd/SSToastMessage.git', :tag => s.version }
+    s.source                 = { :git => 'https://github.com/SimformSolutionsPvtLtd/SSToastMessage.git', :tag => s.version.to_s }
     s.social_media_url       = 'https://www.simform.com'
     
     s.ios.deployment_target  = '13.0'
     
     s.source_files           = 'Sources/Classes/*.swift'
-    s.requires_arc           = true
     s.frameworks             = ['SwiftUI']
     
 end
