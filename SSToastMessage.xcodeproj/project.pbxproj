@@ -53,27 +53,28 @@
       };
       "OBJ_15" = {
          isa = "PBXFileReference";
-         path = "LICENSE";
+         path = "screen_shots.png";
          sourceTree = "<group>";
       };
       "OBJ_16" = {
          isa = "PBXFileReference";
-         path = "README.md";
+         path = "simformBanner.png";
          sourceTree = "<group>";
       };
       "OBJ_17" = {
          isa = "PBXFileReference";
-         path = "SSToastMessage.podspec";
+         path = "LICENSE";
+         sourceTree = "<group>";
+      };
+      "OBJ_18" = {
+         isa = "PBXFileReference";
+         path = "README.md";
          sourceTree = "<group>";
       };
       "OBJ_19" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_20",
-            "OBJ_21"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
+         isa = "PBXFileReference";
+         path = "SSToastMessage.podspec";
+         sourceTree = "<group>";
       };
       "OBJ_2" = {
          isa = "XCConfigurationList";
@@ -85,6 +86,20 @@
          defaultConfigurationName = "Release";
       };
       "OBJ_20" = {
+         isa = "PBXFileReference";
+         path = "demo.gif";
+         sourceTree = "<group>";
+      };
+      "OBJ_22" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_23",
+            "OBJ_24"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_23" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             ENABLE_TESTABILITY = "YES";
@@ -125,7 +140,7 @@
          };
          name = "Debug";
       };
-      "OBJ_21" = {
+      "OBJ_24" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             ENABLE_TESTABILITY = "YES";
@@ -166,59 +181,30 @@
          };
          name = "Release";
       };
-      "OBJ_22" = {
+      "OBJ_25" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_23",
-            "OBJ_24",
-            "OBJ_25"
+            "OBJ_26",
+            "OBJ_27",
+            "OBJ_28"
          );
       };
-      "OBJ_23" = {
+      "OBJ_26" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_8";
       };
-      "OBJ_24" = {
+      "OBJ_27" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_9";
       };
-      "OBJ_25" = {
+      "OBJ_28" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_10";
       };
-      "OBJ_26" = {
+      "OBJ_29" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
          );
-      };
-      "OBJ_28" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_29",
-            "OBJ_30"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_29" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "5",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
-               "-package-description-version",
-               "5.2.0"
-            );
-            SWIFT_VERSION = "5.0";
-         };
-         name = "Debug";
       };
       "OBJ_3" = {
          isa = "XCBuildConfiguration";
@@ -262,7 +248,36 @@
          };
          name = "Debug";
       };
-      "OBJ_30" = {
+      "OBJ_31" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_32",
+            "OBJ_33"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_32" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.2.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_33" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             LD = "/usr/bin/true";
@@ -282,13 +297,13 @@
          };
          name = "Release";
       };
-      "OBJ_31" = {
+      "OBJ_34" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_32"
+            "OBJ_35"
          );
       };
-      "OBJ_32" = {
+      "OBJ_35" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_6";
       };
@@ -340,7 +355,10 @@
             "OBJ_14",
             "OBJ_15",
             "OBJ_16",
-            "OBJ_17"
+            "OBJ_17",
+            "OBJ_18",
+            "OBJ_19",
+            "OBJ_20"
          );
          path = "";
          sourceTree = "<group>";
@@ -374,10 +392,10 @@
       };
       "SSToastMessage::SSToastMessage" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_19";
+         buildConfigurationList = "OBJ_22";
          buildPhases = (
-            "OBJ_22",
-            "OBJ_26"
+            "OBJ_25",
+            "OBJ_29"
          );
          dependencies = (
          );
@@ -393,9 +411,9 @@
       };
       "SSToastMessage::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_28";
+         buildConfigurationList = "OBJ_31";
          buildPhases = (
-            "OBJ_31"
+            "OBJ_34"
          );
          dependencies = (
          );
