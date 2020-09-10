@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .target(
             name: "SSToastMessage",
-            path: "Sources"),
+            path: "Sources/Classes"),
     ],
     swiftLanguageVersions: [.v5]
 )
