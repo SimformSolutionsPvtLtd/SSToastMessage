@@ -26,7 +26,6 @@ Pod::Spec.new do |s|
     
     s.ios.deployment_target  = '13.0'
     
-    s.source                 = { :git => "https://github.com/SimformSolutionsPvtLtd/SSToastMessage.git",:tag => s.version }
     s.source_files           = 'Sources/**/*.swift'
     s.requires_arc           = true
     s.frameworks             = ['SwiftUI']
