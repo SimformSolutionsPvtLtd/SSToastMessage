@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
  	  s.name                   = 'SSToastMessage'
-  	s.version                = '1.0.0'
+  	s.version                = '1.0.1'
   	s.platform               = :ios
     s.swift_versions         = '5.0'
   	s.summary                = 'Simple popup view build in SwiftUI.'
