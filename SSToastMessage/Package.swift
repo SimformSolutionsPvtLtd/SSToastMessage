@@ -7,6 +7,7 @@ let package = Package(
     name: "SSToastMessage",
     platforms: [
         .iOS(.v13),
+        .macOS(.v10_15)
     ],
     products: [
         .library(

@@ -108,7 +108,23 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
     }
     
     private var screenHeight: CGFloat {
-        UIScreen.main.bounds.height
+        #if os(watchOS)
+        return WKInterfaceDevice.current().screenBounds.size.height
+        #elseif os(iOS)
+        return UIScreen.main.bounds.size.height
+        #elseif os(macOS)
+        return NSScreen.main?.frame.height ?? 0
+        #endif
+    }
+    
+    private var screenWidth: CGFloat {
+        #if os(watchOS)
+        return WKInterfaceDevice.current().screenBounds.size.width
+        #elseif os(iOS)
+        return UIScreen.main.bounds.size.width
+        #elseif os(macOS)
+        return NSScreen.main?.frame.width ?? 0
+        #endif
     }
     
     // MARK: - Content Builders
@@ -173,7 +189,7 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
                         )
                     }
                 }
-                .frame(width: UIScreen.main.bounds.width)
+                .frame(width: screenWidth)
                 .offset(x: 0, y: currentOffset)
                 .animation(animation)
             }
