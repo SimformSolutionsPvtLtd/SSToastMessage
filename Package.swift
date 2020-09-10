@@ -14,6 +14,8 @@ let package = Package(
             name: "SSToastMessage",
             targets: ["SSToastMessage"]),
     ],
+    dependencies: [
+    ],
     targets: [
         .target(
             name: "SSToastMessage",
