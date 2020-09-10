@@ -48,7 +48,7 @@
       };
       "OBJ_14" = {
          isa = "PBXFileReference";
-         path = "Example";
+         path = "SSToastMessage";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_15" = {
@@ -73,7 +73,7 @@
       };
       "OBJ_19" = {
          isa = "PBXFileReference";
-         path = "SSToastMessage.podspec";
+         path = "demo.gif";
          sourceTree = "<group>";
       };
       "OBJ_2" = {
@@ -85,21 +85,16 @@
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_20" = {
-         isa = "PBXFileReference";
-         path = "demo.gif";
-         sourceTree = "<group>";
-      };
-      "OBJ_22" = {
+      "OBJ_21" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_23",
-            "OBJ_24"
+            "OBJ_22",
+            "OBJ_23"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_23" = {
+      "OBJ_22" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             ENABLE_TESTABILITY = "YES";
@@ -140,7 +135,7 @@
          };
          name = "Debug";
       };
-      "OBJ_24" = {
+      "OBJ_23" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             ENABLE_TESTABILITY = "YES";
@@ -181,27 +176,27 @@
          };
          name = "Release";
       };
-      "OBJ_25" = {
+      "OBJ_24" = {
          isa = "PBXSourcesBuildPhase";
          files = (
+            "OBJ_25",
             "OBJ_26",
-            "OBJ_27",
-            "OBJ_28"
+            "OBJ_27"
          );
       };
-      "OBJ_26" = {
+      "OBJ_25" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_8";
       };
-      "OBJ_27" = {
+      "OBJ_26" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_9";
       };
-      "OBJ_28" = {
+      "OBJ_27" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_10";
       };
-      "OBJ_29" = {
+      "OBJ_28" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
          );
@@ -248,16 +243,16 @@
          };
          name = "Debug";
       };
-      "OBJ_31" = {
+      "OBJ_30" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_32",
-            "OBJ_33"
+            "OBJ_31",
+            "OBJ_32"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_32" = {
+      "OBJ_31" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             LD = "/usr/bin/true";
@@ -277,7 +272,7 @@
          };
          name = "Debug";
       };
-      "OBJ_33" = {
+      "OBJ_32" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             LD = "/usr/bin/true";
@@ -297,13 +292,13 @@
          };
          name = "Release";
       };
-      "OBJ_34" = {
+      "OBJ_33" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_35"
+            "OBJ_34"
          );
       };
-      "OBJ_35" = {
+      "OBJ_34" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_6";
       };
@@ -357,8 +352,7 @@
             "OBJ_16",
             "OBJ_17",
             "OBJ_18",
-            "OBJ_19",
-            "OBJ_20"
+            "OBJ_19"
          );
          path = "";
          sourceTree = "<group>";
@@ -377,7 +371,7 @@
             "OBJ_10"
          );
          name = "Sources";
-         path = "Sources/Classes";
+         path = "SSToastMessage/Sources/Classes";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_8" = {
@@ -392,10 +386,10 @@
       };
       "SSToastMessage::SSToastMessage" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_22";
+         buildConfigurationList = "OBJ_21";
          buildPhases = (
-            "OBJ_25",
-            "OBJ_29"
+            "OBJ_24",
+            "OBJ_28"
          );
          dependencies = (
          );
@@ -411,9 +405,9 @@
       };
       "SSToastMessage::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_31";
+         buildConfigurationList = "OBJ_30";
          buildPhases = (
-            "OBJ_34"
+            "OBJ_33"
          );
          dependencies = (
          );
