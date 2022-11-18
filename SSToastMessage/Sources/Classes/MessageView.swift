@@ -51,6 +51,9 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
     /// Allow to perform action on tap default is
     var onTap: () -> Void
     
+    /// Allow to perform any action when toast hide
+    var onToastHide: () -> Void
+    
     /// Should close on tap outside - default is `false`
     var closeOnTapOutside: Bool
     
@@ -158,6 +161,7 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
             dispatchWorkHolder.work?.cancel()
             dispatchWorkHolder.work = DispatchWorkItem(block: {
                 self.isPresented = false
+                self.onToastHide()
             })
             if isPresented, let work = dispatchWorkHolder.work {
                 DispatchQueue.main.asyncAfter(deadline: .now() + autohideDuration, execute: work)

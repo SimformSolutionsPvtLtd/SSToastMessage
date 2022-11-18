@@ -66,7 +66,9 @@ struct ContentView: View {
                     self.createAlertView()
                 }
                     
-                .present(isPresented: self.$showTopToast, type: .toast, position: .top, onTap: {print("on toast tap")}) {
+                .present(isPresented: self.$showTopToast, type: .toast, position: .top, autohideDuration: 6.0, onTap: {print("on toast tap")}, onToastHide: {
+                    print("on toast hide")
+                }) {
                     self.createTopToastView()
                 }
                 .present(isPresented: self.$showBottomToast, type: .toast, position: .bottom, onTap: {print("on toast tap")}) {
