@@ -42,14 +42,17 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
     
     var animation: Animation
     
-    /// If nil - never hides on its own
-    var autohideDuration: Double?
+    /// If nil - don't dismiss automatically
+    var duration: Double?
     
     /// Should close on tap - default is `true`
     var closeOnTap: Bool
     
     /// Allow to perform action on tap default is
     var onTap: () -> Void
+    
+    /// Allow to perform any action when toast dismiss
+    var onToastDismiss: () -> Void
     
     /// Should close on tap outside - default is `false`
     var closeOnTapOutside: Bool
@@ -153,14 +156,15 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
     /// This is the builder for the sheet content
     func presentSheet() -> some View {
         
-        // if needed, dispatch autohide and cancel previous one
-        if let autohideDuration = autohideDuration {
+        // if needed, dispatch autoDismiss and cancel previous one
+        if let duration = duration {
             dispatchWorkHolder.work?.cancel()
             dispatchWorkHolder.work = DispatchWorkItem(block: {
                 self.isPresented = false
+                self.onToastDismiss()
             })
             if isPresented, let work = dispatchWorkHolder.work {
-                DispatchQueue.main.asyncAfter(deadline: .now() + autohideDuration, execute: work)
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute: work)
             }
         }
         
