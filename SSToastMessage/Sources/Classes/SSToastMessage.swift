@@ -19,6 +19,7 @@ extension View {
     ///   - autohideDuration: time after which message view should disappear.
     ///   - closeOnTap: on message view tap it should disappear.
     ///   - onTap: on message view tap perform any action or navigation.
+    ///   - onToastHide: on toast hide perform any action.
     ///   - closeOnTapOutside: on outside tap message view should disappear.
     ///   - view: view you want to display on your message view
     /// - Returns: void
@@ -30,6 +31,7 @@ extension View {
         autohideDuration: Double? = 3.0,
         closeOnTap: Bool = true,
         onTap: (() -> Void)? = nil,
+        onToastHide: (() -> Void)? = nil,
         closeOnTapOutside: Bool = false,
         view: @escaping () -> MessageContent) -> some View {
         self.modifier(
@@ -41,6 +43,7 @@ extension View {
                 autohideDuration: autohideDuration,
                 closeOnTap: closeOnTap,
                 onTap: onTap ?? {},
+                onToastHide: onToastHide ?? {},
                 closeOnTapOutside: closeOnTapOutside,
                 view: view)
         )
