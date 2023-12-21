@@ -15,6 +15,7 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
         case alert
         case toast
         case floater(verticalPadding: CGFloat = 50)
+        case full
         
         func shouldBeCentered() -> Bool {
             switch self {
@@ -84,6 +85,8 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
                 } else {
                     return -presenterContentRect.midY + sheetContentRect.height/2 + verticalPadding
             }
+            case .full:
+                return 0
         }
     }
     

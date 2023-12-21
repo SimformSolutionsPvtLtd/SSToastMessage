@@ -45,7 +45,20 @@ extension View {
                 view: view)
         )
     }
-    
+
+    public func presentFull<MessageContent: View>(
+        isPresented: Binding<Bool>,
+        type: MessageView<MessageContent>.MessageType = .full,
+        position: MessageView<MessageContent>.Position = .bottom,
+        animation: Animation = .linear(duration: 0),
+        autohideDuration: Double? = nil,
+        closeOnTap: Bool = false,
+        onTap: (() -> Void)? = nil,
+        closeOnTapOutside: Bool = true,
+        view: @escaping () -> MessageContent) -> some View {
+        present(isPresented: isPresented, type: type, position: position, animation: animation, autohideDuration: autohideDuration, closeOnTap: closeOnTap, onTap: onTap, closeOnTapOutside: closeOnTapOutside, view: view)
+    }
+
     func applyIf<T: View>(_ condition: @autoclosure () -> Bool, apply: (Self) -> T) -> AnyView {
         if condition() {
             return AnyView(apply(self))
