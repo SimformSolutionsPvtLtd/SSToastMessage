@@ -30,9 +30,9 @@ extension View {
         animation: Animation = Animation.easeOut(duration: 0.3),
         duration: Double? = 3.0,
         closeOnTap: Bool = true,
+        closeOnTapOutside: Bool = false,
         onTap: (() -> Void)? = nil,
         onToastDismiss: (() -> Void)? = nil,
-        closeOnTapOutside: Bool = false,
         view: @escaping () -> MessageContent) -> some View {
         self.modifier(
             MessageView(
@@ -49,11 +49,4 @@ extension View {
         )
     }
     
-    func applyIf<T: View>(_ condition: @autoclosure () -> Bool, apply: (Self) -> T) -> AnyView {
-        if condition() {
-            return AnyView(apply(self))
-        } else {
-            return AnyView(self)
-        }
-    }
 }

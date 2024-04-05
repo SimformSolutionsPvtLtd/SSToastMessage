@@ -133,24 +133,29 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
     // MARK: - Content Builders
     
     public func body(content: Content) -> some View {
-        content
-            .applyIf(closeOnTapOutside) {
-                $0.simultaneousGesture( TapGesture().onEnded {
-                    self.isPresented = false
-                })
-        }
-        .background(
-            GeometryReader { proxy -> AnyView in
-                let rect = proxy.frame(in: .global)
-                // This avoids an infinite layout loop
-                if rect.integral != self.presenterContentRect.integral {
-                    DispatchQueue.main.async {
-                        self.presenterContentRect = rect
+        ZStack {
+            content
+                .background(
+                    GeometryReader { proxy -> AnyView in
+                        let rect = proxy.frame(in: .global)
+                        // This avoids an infinite layout loop
+                        if rect.integral != self.presenterContentRect.integral {
+                            DispatchQueue.main.async {
+                                self.presenterContentRect = rect
+                            }
+                        }
+                        return AnyView(EmptyView())
                     }
-                }
-                return AnyView(EmptyView())
+                ).overlay(presentSheet())
+            if closeOnTapOutside {
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        self.isPresented = false
+                    }
+                    .opacity(isPresented ? 0.5 : 0)
             }
-        ).overlay(presentSheet())
+        }
     }
     
     /// This is the builder for the sheet content
