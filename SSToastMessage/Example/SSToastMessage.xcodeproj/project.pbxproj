@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120680512BB67E360034F1A0 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120680502BB67E360034F1A0 /* DemoView.swift */; };
 		3DEC9B71978C5ACB7BD68433 /* Pods_SSToastMessage_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE119A8B6170242AF489112C /* Pods_SSToastMessage_Example.framework */; };
 		A05A73DA25075B6E00E86576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05A73D925075B6E00E86576 /* AppDelegate.swift */; };
 		A05A73DC25075B6E00E86576 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05A73DB25075B6E00E86576 /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		055FE7D23C0C2ED455D09BD4 /* Pods-SSToastMessage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessage_Example.debug.xcconfig"; path = "Target Support Files/Pods-SSToastMessage_Example/Pods-SSToastMessage_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		120680502BB67E360034F1A0 /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		77D03C12ECF8A03B74B576BA /* Pods-SSToastMessage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessage_Example.release.xcconfig"; path = "Target Support Files/Pods-SSToastMessage_Example/Pods-SSToastMessage_Example.release.xcconfig"; sourceTree = "<group>"; };
 		78DA2174724B55D863AEB50D /* Pods_SSToastMessage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSToastMessage_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05A73D625075B6E00E86576 /* SSToastMessage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSToastMessage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 				A05A73E425075B6F00E86576 /* LaunchScreen.storyboard */,
 				A05A73E725075B6F00E86576 /* Info.plist */,
 				A05A73E125075B6F00E86576 /* Preview Content */,
+				120680502BB67E360034F1A0 /* DemoView.swift */,
 			);
 			path = SSToastMessage;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				A05A73DA25075B6E00E86576 /* AppDelegate.swift in Sources */,
 				A05A73DC25075B6E00E86576 /* SceneDelegate.swift in Sources */,
+				120680512BB67E360034F1A0 /* DemoView.swift in Sources */,
 				A05A73DE25075B6E00E86576 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

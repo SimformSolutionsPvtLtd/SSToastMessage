@@ -126,6 +126,7 @@ animation | `animation: Animation` | custom animation for message view sliding o
 autohideDuration | `autohideDuration: Double?` |  time after which message view should disappear.
 closeOnTap | `closeOnTap: Bool` | on message view tap it should disappear.
 onTap | `onTap: () -> Void` | on message view tap perform any action or navigation.
+onToastHide | `onToastHide: () -> Void` | on toast hide perform any action.
 closeOnTapOutside | `closeOnTapOutside: Bool` | on outside tap message view should disappear.
 
 

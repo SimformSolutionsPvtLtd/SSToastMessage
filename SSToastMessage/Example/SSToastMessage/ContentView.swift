@@ -41,6 +41,7 @@ struct ContentView: View {
     @State var showBottomToast = false
     @State var showTopFloater = false
     @State var showBottomFloater = false
+    @State var showDemoView = false
 
     func dismissAll() {
         self.showAlert = false
@@ -62,20 +63,30 @@ struct ContentView: View {
                 }
                 
 
-                .present(isPresented: self.$showAlert, type: .alert, animation: Animation.interactiveSpring(), autohideDuration: nil, closeOnTap: false) {
+                .present(isPresented: self.$showAlert, type: .alert, animation: Animation.interactiveSpring(), duration: nil, closeOnTap: false) {
                     self.createAlertView()
                 }
                     
-                .present(isPresented: self.$showTopToast, type: .toast, position: .top, onTap: {print("on toast tap")}) {
+                .present(isPresented: self.$showTopToast, type: .toast, position: .top, duration: 6.0, onTap: {
+                    showDemoView = true
+                }, onToastDismiss: {
+                    print("on toast hide")
+                }) {
                     self.createTopToastView()
                 }
-                .present(isPresented: self.$showBottomToast, type: .toast, position: .bottom, onTap: {print("on toast tap")}) {
+                .present(isPresented: self.$showBottomToast, type: .toast, position: .bottom, onTap: {
+                    showDemoView = true
+                }) {
                     self.createBottomToastView()
                 }
-                .present(isPresented: self.$showTopFloater, type: .floater(), position: .top, animation: Animation.spring(), onTap: {print("on toast tap")}) {
+                .present(isPresented: self.$showTopFloater, type: .floater(), position: .top, animation: Animation.spring(), onTap: {
+                    showDemoView = true
+                }) {
                     self.createTopFloaterView()
                 }
-                .present(isPresented: self.$showBottomFloater, type: .floater(), position: .bottom,animation: Animation.spring(), autohideDuration: nil, onTap: {print("on toast tap")}) {
+                .present(isPresented: self.$showBottomFloater, type: .floater(), position: .bottom,animation: Animation.spring(), duration: nil, onTap: {
+                    showDemoView = true
+                }) {
                     self.createBottomFloaterView()
                 }
                 
@@ -86,7 +97,9 @@ struct ContentView: View {
         .background(self.bgColor)
         .edgesIgnoringSafeArea(.all)
              
-
+        .sheet(isPresented: $showDemoView) {
+            DemoView()
+        }
 
     }
 
