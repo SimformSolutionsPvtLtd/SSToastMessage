@@ -10,6 +10,8 @@ import SwiftUI
 
 public struct MessageView<MessageContent>: ViewModifier where MessageContent: View {
     
+   @ObservedObject var viewModel = ViewModel()
+    
     public enum MessageType {
         
         case alert
@@ -45,6 +47,9 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
     /// If nil - don't dismiss automatically
     var duration: Double?
     
+    /// Should Add horizontal padding - default - 0
+    var horizontalPadding: CGFloat?
+    
     /// Should close on tap - default is `true`
     var closeOnTap: Bool
     
@@ -58,7 +63,10 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
     var closeOnTapOutside: Bool
     
     var view: () -> MessageContent
-    
+        
+    @State private var viewHeight: CGFloat = .zero
+    @State private var viewWidth: CGFloat = .zero
+
     /// holder for autohiding dispatch work (to be able to cancel it when needed)
     var dispatchWorkHolder = DispatchWorkHolder()
     
@@ -73,19 +81,19 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
     /// The offset when the popup is displayed
     private var displayedOffset: CGFloat {
         switch type {
-            case .alert:
-                return  -presenterContentRect.midY + screenHeight/2
-            case .toast:
-                if position == .bottom {
-                    return screenHeight - presenterContentRect.midY - sheetContentRect.height/2
-                } else {
-                    return -presenterContentRect.midY + sheetContentRect.height/2
+        case .alert:
+            return  -presenterContentRect.midY + viewHeight/2
+        case .toast:
+            if position == .bottom {
+                return viewHeight - presenterContentRect.midY - sheetContentRect.height/2
+            } else {
+                return -presenterContentRect.midY + sheetContentRect.height/2
             }
-            case .floater(let verticalPadding):
-                if position == .bottom {
-                    return screenHeight - presenterContentRect.midY - sheetContentRect.height/2 - verticalPadding
-                } else {
-                    return -presenterContentRect.midY + sheetContentRect.height/2 + verticalPadding
+        case .floater(let verticalPadding):
+            if position == .bottom {
+                return viewHeight - presenterContentRect.midY - sheetContentRect.height/2 - verticalPadding
+            } else {
+                return -presenterContentRect.midY + sheetContentRect.height/2 + verticalPadding
             }
         }
     }
@@ -113,48 +121,63 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
     private var screenHeight: CGFloat {
         #if os(watchOS)
         return WKInterfaceDevice.current().screenBounds.size.height
-        #elseif os(iOS)
-        return UIScreen.main.bounds.size.height
         #elseif os(macOS)
         return NSScreen.main?.frame.height ?? 0
+        #elseif os(iOS)
+        return UIScreen.main.bounds.size.height
         #endif
     }
     
     private var screenWidth: CGFloat {
         #if os(watchOS)
         return WKInterfaceDevice.current().screenBounds.size.width
+        #elseif os(macOS)
+        return  NSScreen.main?.frame.width ?? 0
         #elseif os(iOS)
         return UIScreen.main.bounds.size.width
-        #elseif os(macOS)
-        return NSScreen.main?.frame.width ?? 0
         #endif
     }
     
     // MARK: - Content Builders
     
     public func body(content: Content) -> some View {
-        ZStack {
-            content
-                .background(
-                    GeometryReader { proxy -> AnyView in
-                        let rect = proxy.frame(in: .global)
-                        // This avoids an infinite layout loop
-                        if rect.integral != self.presenterContentRect.integral {
-                            DispatchQueue.main.async {
-                                self.presenterContentRect = rect
+        GeometryReader { proxy in
+            ZStack {
+                content
+                    .background(
+                        GeometryReader { proxy -> AnyView in
+                            let rect = proxy.frame(in: .global)
+                            // This avoids an infinite layout loop
+                            if rect.integral != self.presenterContentRect.integral {
+                                DispatchQueue.main.async {
+                                    viewModel.updateView = true
+                                    self.presenterContentRect = rect
+                                }
                             }
+                            return AnyView(EmptyView())
                         }
-                        return AnyView(EmptyView())
-                    }
-                ).overlay(presentSheet())
-            if closeOnTapOutside {
-                Color.clear
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        self.isPresented = false
-                    }
-                    .opacity(isPresented ? 0.5 : 0)
-            }
+                    )
+                    .overlay(presentSheet())
+                #if !(os(macOS))
+                    .navigationBarHidden(true)
+                #endif
+                if closeOnTapOutside {
+                    Color.clear
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            self.isPresented = false
+                        }
+                        .opacity(isPresented ? 0.5 : 0)
+                }
+            }.onReceive(viewModel.$updateView, perform: { _ in
+                viewHeight = proxy.size.height
+                #if os(macOS) || targetEnvironment(macCatalyst)
+                viewWidth = proxy.size.width - (horizontalPadding ?? 0)
+                #elseif os(iOS)
+                viewWidth = screenWidth - (horizontalPadding ?? 0)
+                #endif
+            })
+            .frame(width: proxy.size.width, height: proxy.size.height)
         }
     }
     
@@ -198,9 +221,9 @@ public struct MessageView<MessageContent>: ViewModifier where MessageContent: Vi
                         )
                     }
                 }
-                .frame(width: screenWidth)
+                .frame(width: viewWidth)
                 .offset(x: 0, y: currentOffset)
-                .animation(animation)
+                .animation(animation, value: isPresented)
             }
         }
     }

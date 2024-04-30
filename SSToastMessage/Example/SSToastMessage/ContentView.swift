@@ -52,6 +52,22 @@ struct ContentView: View {
     }
 
     var body: some View {
+        
+        if #available(iOS 16.0, *, macOS 13.0) {
+            NavigationStack {
+                content
+                    .navigationDestination(isPresented: $showDemoView, destination: {
+                        DemoView()
+                    })
+            }
+        } else {
+            NavigationView {
+                content
+            }
+        }
+    }
+    
+    private var content: some View {
         GeometryReader { geometryProxy in
             VStack {
                 VStack(spacing: 30) {
@@ -79,7 +95,7 @@ struct ContentView: View {
                 }) {
                     self.createBottomToastView()
                 }
-                .present(isPresented: self.$showTopFloater, type: .floater(), position: .top, animation: Animation.spring(), onTap: {
+                .present(isPresented: self.$showTopFloater, type: .floater(), position: .top, animation: Animation.spring(), horizontalPadding: 60, onTap: {
                     showDemoView = true
                 }) {
                     self.createTopFloaterView()
@@ -90,17 +106,17 @@ struct ContentView: View {
                     self.createBottomFloaterView()
                 }
                 
-                }
+            }
+            NavigationLink(destination: DemoView(), isActive: $showDemoView) {
+                EmptyView()
+            }
             .frame(width: geometryProxy.size.width, height: geometryProxy.size.height)
-            
         }
+        .ignoresSafeArea()
+        .navigationViewStyle(.automatic)
         .background(self.bgColor)
-        .edgesIgnoringSafeArea(.all)
-             
-        .sheet(isPresented: $showDemoView) {
-            DemoView()
-        }
-
+        .buttonStyle(.plain)
+        .ignoresSafeArea()
     }
 
     func createAlertView() -> some View {
@@ -170,13 +186,13 @@ struct ContentView: View {
                 }
             }.padding(15)
         }
-        .frame(width: UIScreen.main.bounds.width, height: 130)
+        .frame(height: 130)
         .background(self.topToastColor)
     }
 
     func createBottomToastView() -> some View {
         VStack {
-            HStack() {
+            HStack(alignment: .center) {
                 Image("pizza")
                     .resizable()
                     .aspectRatio(contentMode: ContentMode.fill)
@@ -194,10 +210,9 @@ struct ContentView: View {
                         .foregroundColor(Color(hex: "206a5d"))
                 }
             }
-            Spacer(minLength: 10)
         }
         .padding(15)
-        .frame(width: UIScreen.main.bounds.width, height: 100)
+        .frame(maxWidth: .infinity, maxHeight: 100)
         .background(self.bottomToastColor)
     }
 
@@ -230,7 +245,7 @@ struct ContentView: View {
                 }
             }.padding(15)
         }
-        .frame(width: UIScreen.main.bounds.width - 60, height: 110)
+        .frame(height: 110)
         .background(self.topFloatColor)
         .cornerRadius(15)
     }
