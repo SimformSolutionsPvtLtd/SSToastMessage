@@ -1,9 +1,8 @@
 //
 //  ContentView.swift
-//  SSToastMessage
+//  SSToastMessageExample
 //
-//  Created by Ankit Panchal on 08/09/20.
-//  Copyright © 2020 Simform Solution Pvt. Ltd. All rights reserved.
+//  Created by Yagnik Bavishi on 01/05/24.
 //
 
 import SwiftUI
@@ -331,10 +330,8 @@ struct ContentView: View {
 
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }
 
 extension Color {
@@ -350,5 +347,3 @@ extension Color {
         self.init(red: Double(r) / 0xff, green: Double(g) / 0xff, blue: Double(b) / 0xff)
     }
 }
-
-

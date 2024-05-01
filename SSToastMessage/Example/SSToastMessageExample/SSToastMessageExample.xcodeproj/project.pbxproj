@@ -1,0 +1,934 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006E5FD2F2FDDA376BBC15F6 /* libPods-SSToastMessageExampleMacOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A97E8877E354EE8CFDAA2B /* libPods-SSToastMessageExampleMacOS.a */; };
+		02DE619212C68BA4AEB03F76 /* Pods_SSToastMessageExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA53279914F194753647E305 /* Pods_SSToastMessageExampleTests.framework */; };
+		0B6BD07E300E5BE5041EC9C8 /* Pods_SSToastMessageExample_SSToastMessageExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAC7981ACB51801A2FE5DF8 /* Pods_SSToastMessageExample_SSToastMessageExampleUITests.framework */; };
+		1267D7902BE38A1E00A7DB50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B5D2BE24DFC00BFC12B /* ContentView.swift */; };
+		1267D7912BE38A1E00A7DB50 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B852BE24ED200BFC12B /* DemoView.swift */; };
+		1267D7922BE38A1E00A7DB50 /* SSToastMessageExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B5B2BE24DFC00BFC12B /* SSToastMessageExampleApp.swift */; };
+		1267D7932BE38A1E00A7DB50 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B8B2BE26E8B00BFC12B /* SplashScreenView.swift */; };
+		1267D7972BE38A1E00A7DB50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E59B622BE24DFE00BFC12B /* Preview Assets.xcassets */; };
+		1267D7982BE38A1E00A7DB50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E59B5F2BE24DFE00BFC12B /* Assets.xcassets */; };
+		12E59B5C2BE24DFC00BFC12B /* SSToastMessageExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B5B2BE24DFC00BFC12B /* SSToastMessageExampleApp.swift */; };
+		12E59B5E2BE24DFC00BFC12B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B5D2BE24DFC00BFC12B /* ContentView.swift */; };
+		12E59B602BE24DFE00BFC12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E59B5F2BE24DFE00BFC12B /* Assets.xcassets */; };
+		12E59B632BE24DFE00BFC12B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E59B622BE24DFE00BFC12B /* Preview Assets.xcassets */; };
+		12E59B6D2BE24DFE00BFC12B /* SSToastMessageExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B6C2BE24DFE00BFC12B /* SSToastMessageExampleTests.swift */; };
+		12E59B772BE24DFE00BFC12B /* SSToastMessageExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B762BE24DFE00BFC12B /* SSToastMessageExampleUITests.swift */; };
+		12E59B792BE24DFE00BFC12B /* SSToastMessageExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B782BE24DFE00BFC12B /* SSToastMessageExampleUITestsLaunchTests.swift */; };
+		12E59B862BE24ED200BFC12B /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B852BE24ED200BFC12B /* DemoView.swift */; };
+		12E59B882BE257FF00BFC12B /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		12E59B8C2BE26E8B00BFC12B /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E59B8B2BE26E8B00BFC12B /* SplashScreenView.swift */; };
+		C4AA75940C2F4FFDC8FD4AA4 /* Pods_SSToastMessageExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930824E13A17FF5B2B6EB0F /* Pods_SSToastMessageExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		12E59B692BE24DFE00BFC12B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12E59B502BE24DFC00BFC12B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12E59B572BE24DFC00BFC12B;
+			remoteInfo = SSToastMessageExample;
+		};
+		12E59B732BE24DFE00BFC12B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12E59B502BE24DFC00BFC12B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12E59B572BE24DFC00BFC12B;
+			remoteInfo = SSToastMessageExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AAC7981ACB51801A2FE5DF8 /* Pods_SSToastMessageExample_SSToastMessageExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSToastMessageExample_SSToastMessageExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1267D79D2BE38A1E00A7DB50 /* SSToastMessageExampleMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSToastMessageExampleMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E59B582BE24DFC00BFC12B /* SSToastMessageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSToastMessageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E59B5B2BE24DFC00BFC12B /* SSToastMessageExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSToastMessageExampleApp.swift; sourceTree = "<group>"; };
+		12E59B5D2BE24DFC00BFC12B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		12E59B5F2BE24DFE00BFC12B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		12E59B622BE24DFE00BFC12B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		12E59B682BE24DFE00BFC12B /* SSToastMessageExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSToastMessageExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E59B6C2BE24DFE00BFC12B /* SSToastMessageExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSToastMessageExampleTests.swift; sourceTree = "<group>"; };
+		12E59B722BE24DFE00BFC12B /* SSToastMessageExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSToastMessageExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E59B762BE24DFE00BFC12B /* SSToastMessageExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSToastMessageExampleUITests.swift; sourceTree = "<group>"; };
+		12E59B782BE24DFE00BFC12B /* SSToastMessageExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSToastMessageExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12E59B852BE24ED200BFC12B /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
+		12E59B872BE24FB000BFC12B /* SSToastMessageExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SSToastMessageExample.entitlements; sourceTree = "<group>"; };
+		12E59B8B2BE26E8B00BFC12B /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		249C4E9265DEBFDE2BC66291 /* Pods-SSToastMessageExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessageExampleTests.release.xcconfig"; path = "Target Support Files/Pods-SSToastMessageExampleTests/Pods-SSToastMessageExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		30A97E8877E354EE8CFDAA2B /* libPods-SSToastMessageExampleMacOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SSToastMessageExampleMacOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5672B353129E690E575AF0F3 /* Pods-SSToastMessageExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessageExample.debug.xcconfig"; path = "Target Support Files/Pods-SSToastMessageExample/Pods-SSToastMessageExample.debug.xcconfig"; sourceTree = "<group>"; };
+		8A65D8C2A288EAF52D933917 /* Pods-SSToastMessageExampleMacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessageExampleMacOS.release.xcconfig"; path = "Target Support Files/Pods-SSToastMessageExampleMacOS/Pods-SSToastMessageExampleMacOS.release.xcconfig"; sourceTree = "<group>"; };
+		8DB1E15BF0FC9E05E5946419 /* Pods-SSToastMessageExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessageExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-SSToastMessageExampleTests/Pods-SSToastMessageExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9441F75358A29BCB4DA102F6 /* Pods-SSToastMessageExample-SSToastMessageExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessageExample-SSToastMessageExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-SSToastMessageExample-SSToastMessageExampleUITests/Pods-SSToastMessageExample-SSToastMessageExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE8303007D0BBD81BE3F9172 /* Pods-SSToastMessageExampleMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessageExampleMacOS.debug.xcconfig"; path = "Target Support Files/Pods-SSToastMessageExampleMacOS/Pods-SSToastMessageExampleMacOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CA53279914F194753647E305 /* Pods_SSToastMessageExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSToastMessageExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0DC43514D390C3D2B353A91 /* Pods-SSToastMessageExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessageExample.release.xcconfig"; path = "Target Support Files/Pods-SSToastMessageExample/Pods-SSToastMessageExample.release.xcconfig"; sourceTree = "<group>"; };
+		E2DCA6DE2B17718B45CC82CA /* Pods-SSToastMessageExample-SSToastMessageExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSToastMessageExample-SSToastMessageExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-SSToastMessageExample-SSToastMessageExampleUITests/Pods-SSToastMessageExample-SSToastMessageExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E930824E13A17FF5B2B6EB0F /* Pods_SSToastMessageExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSToastMessageExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1267D7942BE38A1E00A7DB50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006E5FD2F2FDDA376BBC15F6 /* libPods-SSToastMessageExampleMacOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E59B552BE24DFC00BFC12B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12E59B882BE257FF00BFC12B /* (null) in Frameworks */,
+				C4AA75940C2F4FFDC8FD4AA4 /* Pods_SSToastMessageExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E59B652BE24DFE00BFC12B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02DE619212C68BA4AEB03F76 /* Pods_SSToastMessageExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E59B6F2BE24DFE00BFC12B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B6BD07E300E5BE5041EC9C8 /* Pods_SSToastMessageExample_SSToastMessageExampleUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12E59B4F2BE24DFC00BFC12B = {
+			isa = PBXGroup;
+			children = (
+				12E59B5A2BE24DFC00BFC12B /* SSToastMessageExample */,
+				12E59B6B2BE24DFE00BFC12B /* SSToastMessageExampleTests */,
+				12E59B752BE24DFE00BFC12B /* SSToastMessageExampleUITests */,
+				12E59B592BE24DFC00BFC12B /* Products */,
+				222F31A07D54419DB0368A34 /* Pods */,
+				58713A3E3D3F21F9A610A1AF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		12E59B592BE24DFC00BFC12B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12E59B582BE24DFC00BFC12B /* SSToastMessageExample.app */,
+				12E59B682BE24DFE00BFC12B /* SSToastMessageExampleTests.xctest */,
+				12E59B722BE24DFE00BFC12B /* SSToastMessageExampleUITests.xctest */,
+				1267D79D2BE38A1E00A7DB50 /* SSToastMessageExampleMacOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		12E59B5A2BE24DFC00BFC12B /* SSToastMessageExample */ = {
+			isa = PBXGroup;
+			children = (
+				12E59B872BE24FB000BFC12B /* SSToastMessageExample.entitlements */,
+				12E59B5B2BE24DFC00BFC12B /* SSToastMessageExampleApp.swift */,
+				12E59B5D2BE24DFC00BFC12B /* ContentView.swift */,
+				12E59B852BE24ED200BFC12B /* DemoView.swift */,
+				12E59B8B2BE26E8B00BFC12B /* SplashScreenView.swift */,
+				12E59B5F2BE24DFE00BFC12B /* Assets.xcassets */,
+				12E59B612BE24DFE00BFC12B /* Preview Content */,
+			);
+			path = SSToastMessageExample;
+			sourceTree = "<group>";
+		};
+		12E59B612BE24DFE00BFC12B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				12E59B622BE24DFE00BFC12B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		12E59B6B2BE24DFE00BFC12B /* SSToastMessageExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				12E59B6C2BE24DFE00BFC12B /* SSToastMessageExampleTests.swift */,
+			);
+			path = SSToastMessageExampleTests;
+			sourceTree = "<group>";
+		};
+		12E59B752BE24DFE00BFC12B /* SSToastMessageExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				12E59B762BE24DFE00BFC12B /* SSToastMessageExampleUITests.swift */,
+				12E59B782BE24DFE00BFC12B /* SSToastMessageExampleUITestsLaunchTests.swift */,
+			);
+			path = SSToastMessageExampleUITests;
+			sourceTree = "<group>";
+		};
+		222F31A07D54419DB0368A34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5672B353129E690E575AF0F3 /* Pods-SSToastMessageExample.debug.xcconfig */,
+				E0DC43514D390C3D2B353A91 /* Pods-SSToastMessageExample.release.xcconfig */,
+				9441F75358A29BCB4DA102F6 /* Pods-SSToastMessageExample-SSToastMessageExampleUITests.debug.xcconfig */,
+				E2DCA6DE2B17718B45CC82CA /* Pods-SSToastMessageExample-SSToastMessageExampleUITests.release.xcconfig */,
+				8DB1E15BF0FC9E05E5946419 /* Pods-SSToastMessageExampleTests.debug.xcconfig */,
+				249C4E9265DEBFDE2BC66291 /* Pods-SSToastMessageExampleTests.release.xcconfig */,
+				AE8303007D0BBD81BE3F9172 /* Pods-SSToastMessageExampleMacOS.debug.xcconfig */,
+				8A65D8C2A288EAF52D933917 /* Pods-SSToastMessageExampleMacOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		58713A3E3D3F21F9A610A1AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC7981ACB51801A2FE5DF8 /* Pods_SSToastMessageExample_SSToastMessageExampleUITests.framework */,
+				CA53279914F194753647E305 /* Pods_SSToastMessageExampleTests.framework */,
+				30A97E8877E354EE8CFDAA2B /* libPods-SSToastMessageExampleMacOS.a */,
+				E930824E13A17FF5B2B6EB0F /* Pods_SSToastMessageExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1267D78D2BE38A1E00A7DB50 /* SSToastMessageExampleMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1267D79A2BE38A1E00A7DB50 /* Build configuration list for PBXNativeTarget "SSToastMessageExampleMacOS" */;
+			buildPhases = (
+				1267D78E2BE38A1E00A7DB50 /* [CP] Check Pods Manifest.lock */,
+				1267D78F2BE38A1E00A7DB50 /* Sources */,
+				1267D7942BE38A1E00A7DB50 /* Frameworks */,
+				1267D7962BE38A1E00A7DB50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSToastMessageExampleMacOS;
+			productName = SSToastMessageExample;
+			productReference = 1267D79D2BE38A1E00A7DB50 /* SSToastMessageExampleMacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		12E59B572BE24DFC00BFC12B /* SSToastMessageExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12E59B7C2BE24DFE00BFC12B /* Build configuration list for PBXNativeTarget "SSToastMessageExample" */;
+			buildPhases = (
+				54F5A47AF9881A566229FC1E /* [CP] Check Pods Manifest.lock */,
+				12E59B542BE24DFC00BFC12B /* Sources */,
+				12E59B552BE24DFC00BFC12B /* Frameworks */,
+				12E59B562BE24DFC00BFC12B /* Resources */,
+				D60349A67463D70EBD0129DB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSToastMessageExample;
+			productName = SSToastMessageExample;
+			productReference = 12E59B582BE24DFC00BFC12B /* SSToastMessageExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		12E59B672BE24DFE00BFC12B /* SSToastMessageExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12E59B7F2BE24DFE00BFC12B /* Build configuration list for PBXNativeTarget "SSToastMessageExampleTests" */;
+			buildPhases = (
+				1B2DDF85DAD4907DD41F123D /* [CP] Check Pods Manifest.lock */,
+				12E59B642BE24DFE00BFC12B /* Sources */,
+				12E59B652BE24DFE00BFC12B /* Frameworks */,
+				12E59B662BE24DFE00BFC12B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12E59B6A2BE24DFE00BFC12B /* PBXTargetDependency */,
+			);
+			name = SSToastMessageExampleTests;
+			productName = SSToastMessageExampleTests;
+			productReference = 12E59B682BE24DFE00BFC12B /* SSToastMessageExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		12E59B712BE24DFE00BFC12B /* SSToastMessageExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12E59B822BE24DFE00BFC12B /* Build configuration list for PBXNativeTarget "SSToastMessageExampleUITests" */;
+			buildPhases = (
+				2C3681246E8DEFBBF740D2B1 /* [CP] Check Pods Manifest.lock */,
+				12E59B6E2BE24DFE00BFC12B /* Sources */,
+				12E59B6F2BE24DFE00BFC12B /* Frameworks */,
+				12E59B702BE24DFE00BFC12B /* Resources */,
+				D559E6706E60C4693987DE37 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12E59B742BE24DFE00BFC12B /* PBXTargetDependency */,
+			);
+			name = SSToastMessageExampleUITests;
+			productName = SSToastMessageExampleUITests;
+			productReference = 12E59B722BE24DFE00BFC12B /* SSToastMessageExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12E59B502BE24DFC00BFC12B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					12E59B572BE24DFC00BFC12B = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					12E59B672BE24DFE00BFC12B = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 12E59B572BE24DFC00BFC12B;
+					};
+					12E59B712BE24DFE00BFC12B = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 12E59B572BE24DFC00BFC12B;
+					};
+				};
+			};
+			buildConfigurationList = 12E59B532BE24DFC00BFC12B /* Build configuration list for PBXProject "SSToastMessageExample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 12E59B4F2BE24DFC00BFC12B;
+			productRefGroup = 12E59B592BE24DFC00BFC12B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				12E59B572BE24DFC00BFC12B /* SSToastMessageExample */,
+				12E59B672BE24DFE00BFC12B /* SSToastMessageExampleTests */,
+				12E59B712BE24DFE00BFC12B /* SSToastMessageExampleUITests */,
+				1267D78D2BE38A1E00A7DB50 /* SSToastMessageExampleMacOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1267D7962BE38A1E00A7DB50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1267D7972BE38A1E00A7DB50 /* Preview Assets.xcassets in Resources */,
+				1267D7982BE38A1E00A7DB50 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E59B562BE24DFC00BFC12B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12E59B632BE24DFE00BFC12B /* Preview Assets.xcassets in Resources */,
+				12E59B602BE24DFE00BFC12B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E59B662BE24DFE00BFC12B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E59B702BE24DFE00BFC12B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1267D78E2BE38A1E00A7DB50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SSToastMessageExampleMacOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B2DDF85DAD4907DD41F123D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SSToastMessageExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C3681246E8DEFBBF740D2B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SSToastMessageExample-SSToastMessageExampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54F5A47AF9881A566229FC1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SSToastMessageExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D559E6706E60C4693987DE37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSToastMessageExample-SSToastMessageExampleUITests/Pods-SSToastMessageExample-SSToastMessageExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSToastMessageExample-SSToastMessageExampleUITests/Pods-SSToastMessageExample-SSToastMessageExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SSToastMessageExample-SSToastMessageExampleUITests/Pods-SSToastMessageExample-SSToastMessageExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D60349A67463D70EBD0129DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSToastMessageExample/Pods-SSToastMessageExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSToastMessageExample/Pods-SSToastMessageExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SSToastMessageExample/Pods-SSToastMessageExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1267D78F2BE38A1E00A7DB50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1267D7902BE38A1E00A7DB50 /* ContentView.swift in Sources */,
+				1267D7912BE38A1E00A7DB50 /* DemoView.swift in Sources */,
+				1267D7922BE38A1E00A7DB50 /* SSToastMessageExampleApp.swift in Sources */,
+				1267D7932BE38A1E00A7DB50 /* SplashScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E59B542BE24DFC00BFC12B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12E59B5E2BE24DFC00BFC12B /* ContentView.swift in Sources */,
+				12E59B862BE24ED200BFC12B /* DemoView.swift in Sources */,
+				12E59B5C2BE24DFC00BFC12B /* SSToastMessageExampleApp.swift in Sources */,
+				12E59B8C2BE26E8B00BFC12B /* SplashScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E59B642BE24DFE00BFC12B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12E59B6D2BE24DFE00BFC12B /* SSToastMessageExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E59B6E2BE24DFE00BFC12B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12E59B772BE24DFE00BFC12B /* SSToastMessageExampleUITests.swift in Sources */,
+				12E59B792BE24DFE00BFC12B /* SSToastMessageExampleUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12E59B6A2BE24DFE00BFC12B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12E59B572BE24DFC00BFC12B /* SSToastMessageExample */;
+			targetProxy = 12E59B692BE24DFE00BFC12B /* PBXContainerItemProxy */;
+		};
+		12E59B742BE24DFE00BFC12B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12E59B572BE24DFC00BFC12B /* SSToastMessageExample */;
+			targetProxy = 12E59B732BE24DFE00BFC12B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1267D79B2BE38A1E00A7DB50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE8303007D0BBD81BE3F9172 /* Pods-SSToastMessageExampleMacOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SSToastMessageExample/SSToastMessageExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SSToastMessageExample/Preview Content\"";
+				DEVELOPMENT_TEAM = K7XJG666ZW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simform.SSToastMessage-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1267D79C2BE38A1E00A7DB50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A65D8C2A288EAF52D933917 /* Pods-SSToastMessageExampleMacOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SSToastMessageExample/SSToastMessageExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SSToastMessageExample/Preview Content\"";
+				DEVELOPMENT_TEAM = C367XQY55B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simform.SSToastMessage-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		12E59B7A2BE24DFE00BFC12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		12E59B7B2BE24DFE00BFC12B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		12E59B7D2BE24DFE00BFC12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5672B353129E690E575AF0F3 /* Pods-SSToastMessageExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SSToastMessageExample/SSToastMessageExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SSToastMessageExample/Preview Content\"";
+				DEVELOPMENT_TEAM = K7XJG666ZW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simform.SSToastMessage-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		12E59B7E2BE24DFE00BFC12B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0DC43514D390C3D2B353A91 /* Pods-SSToastMessageExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SSToastMessageExample/SSToastMessageExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SSToastMessageExample/Preview Content\"";
+				DEVELOPMENT_TEAM = C367XQY55B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simform.SSToastMessage-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		12E59B802BE24DFE00BFC12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB1E15BF0FC9E05E5946419 /* Pods-SSToastMessageExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C367XQY55B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simform.SSToastMessage-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSToastMessageExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SSToastMessageExample";
+			};
+			name = Debug;
+		};
+		12E59B812BE24DFE00BFC12B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 249C4E9265DEBFDE2BC66291 /* Pods-SSToastMessageExampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C367XQY55B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simform.SSToastMessage-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSToastMessageExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SSToastMessageExample";
+			};
+			name = Release;
+		};
+		12E59B832BE24DFE00BFC12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9441F75358A29BCB4DA102F6 /* Pods-SSToastMessageExample-SSToastMessageExampleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C367XQY55B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simform.SSToastMessage-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SSToastMessageExample;
+			};
+			name = Debug;
+		};
+		12E59B842BE24DFE00BFC12B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2DCA6DE2B17718B45CC82CA /* Pods-SSToastMessageExample-SSToastMessageExampleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C367XQY55B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simform.SSToastMessage-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SSToastMessageExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1267D79A2BE38A1E00A7DB50 /* Build configuration list for PBXNativeTarget "SSToastMessageExampleMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1267D79B2BE38A1E00A7DB50 /* Debug */,
+				1267D79C2BE38A1E00A7DB50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12E59B532BE24DFC00BFC12B /* Build configuration list for PBXProject "SSToastMessageExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12E59B7A2BE24DFE00BFC12B /* Debug */,
+				12E59B7B2BE24DFE00BFC12B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12E59B7C2BE24DFE00BFC12B /* Build configuration list for PBXNativeTarget "SSToastMessageExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12E59B7D2BE24DFE00BFC12B /* Debug */,
+				12E59B7E2BE24DFE00BFC12B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12E59B7F2BE24DFE00BFC12B /* Build configuration list for PBXNativeTarget "SSToastMessageExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12E59B802BE24DFE00BFC12B /* Debug */,
+				12E59B812BE24DFE00BFC12B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12E59B822BE24DFE00BFC12B /* Build configuration list for PBXNativeTarget "SSToastMessageExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12E59B832BE24DFE00BFC12B /* Debug */,
+				12E59B842BE24DFE00BFC12B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 12E59B502BE24DFC00BFC12B /* Project object */;
+}
