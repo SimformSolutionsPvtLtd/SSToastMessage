@@ -10,5 +10,6 @@ import SwiftUI
 class ViewModel: ObservableObject {
    
     @Published var updateView: Bool = false
+    @Published var isLeftRightToastView: Bool = false
     
 }

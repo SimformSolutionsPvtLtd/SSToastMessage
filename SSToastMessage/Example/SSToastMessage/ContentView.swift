@@ -35,6 +35,7 @@ struct ContentView: View {
     let bottomToastColor = Color(hex: "bfdcae")
     let topFloatColor = Color(hex: "61A117")
     let bottomFloatColor = Color(hex: "3d5a80")
+    let leftRightToastColor = Color(hex: "85adad")
 
     @State var showAlert = false
     @State var showTopToast = false
@@ -42,6 +43,8 @@ struct ContentView: View {
     @State var showTopFloater = false
     @State var showBottomFloater = false
     @State var showDemoView = false
+    @State var showLeftToastView = false
+    @State var showRightToastView = false
 
     func dismissAll() {
         self.showAlert = false
@@ -49,6 +52,8 @@ struct ContentView: View {
         self.showBottomToast = false
         self.showTopFloater = false
         self.showBottomFloater = false
+        self.showLeftToastView = false
+        self.showRightToastView = false
     }
 
     var body: some View {
@@ -76,6 +81,8 @@ struct ContentView: View {
                     MyButtonView(showing: self.$showBottomToast, title: "Bottom Toast", hideAll: self.dismissAll)
                     MyButtonView(showing: self.$showTopFloater, title: "Top Floater", hideAll: self.dismissAll)
                     MyButtonView(showing: self.$showBottomFloater, title: "Bottom Floater", hideAll: self.dismissAll)
+                    MyButtonView(showing: self.$showLeftToastView, title: "Left Toast", hideAll: self.dismissAll)
+                    MyButtonView(showing: self.$showRightToastView, title: "Right Toast", hideAll: self.dismissAll)
                 }
                 
 
@@ -100,10 +107,21 @@ struct ContentView: View {
                 }) {
                     self.createTopFloaterView()
                 }
-                .present(isPresented: self.$showBottomFloater, type: .floater(), position: .bottom,animation: Animation.spring(), duration: nil, onTap: {
+                .present(isPresented: self.$showBottomFloater, type: .floater(), position: .bottom,animation: Animation.spring(), duration: 3, onTap: {
                     showDemoView = true
                 }) {
                     self.createBottomFloaterView()
+                }
+                .present(isPresented: $showLeftToastView, type: .leftToastView, position: .bottom, duration: 3, onTap: {
+                    showDemoView = true
+                }) {
+                    self.createLeftToastView()
+                }
+                           
+                .present(isPresented: $showRightToastView, type: .rightToastView, position: .top, duration: 3, onTap: {
+                    showDemoView = true
+                }) {
+                    self.createRightToastView()
                 }
                 
             }
@@ -273,6 +291,42 @@ struct ContentView: View {
         .frame(width: 350, height: 160)
         .background(self.bottomFloatColor)
         .cornerRadius(20.0)
+    }
+    
+    func createLeftToastView() -> some View {
+        HStack {
+            Text("Left Toast View!!")
+                .lineLimit(2)
+                .font(.system(size: 18))
+                .foregroundColor(.white)
+                .font(.title)
+            Image("leftToastImage")
+                .resizable()
+                .aspectRatio(contentMode: ContentMode.fill)
+                .frame(width: 60, height: 60)
+                .cornerRadius(10.0)
+        }
+        .frame(width: 200, height: 90)
+        .background(self.leftRightToastColor)
+        .cornerRadius(15)
+    }
+    
+    func createRightToastView() -> some View {
+        HStack {
+            Image("rightToastImage")
+                .resizable()
+                .aspectRatio(contentMode: ContentMode.fill)
+                .frame(width: 60, height: 60)
+                .cornerRadius(10.0)
+            Text("Right Toast View!!")
+                .lineLimit(2)
+                .font(.system(size: 18))
+                .foregroundColor(.white)
+                .font(.title)
+        }
+        .frame(width: 200, height: 90)
+        .background(self.leftRightToastColor)
+        .cornerRadius(15)
     }
 
 }
