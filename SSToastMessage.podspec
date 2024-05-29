@@ -8,16 +8,17 @@
 
 Pod::Spec.new do |s|
   s.name = 'SSToastMessage'
-  s.version = '1.0.0'
+  s.version = '2.0.0'
   s.platform = :ios
   s.platform = :osx
   s.swift_versions = '5.0'
   s.summary = 'Simple popup view build in SwiftUI.'
   s.description = <<-DESC
-                  SSToastMessage is written purely in SwiftUI. It will add toast, alert,
-                  and floating message view over the top of any view. It is intended to b
-                  simple, lightweight, and easy to use. It will be a popup with a single line of
-                  code.
+                  Create Toast Views with Minimal Effort in SwiftUI Using SSToastMessage.SSToastMessage enables you to effortlessly add toast
+                  notifications, alerts, and floating messages to any view on both iPhone and macOS. With SSToastMessage, you can display left and
+                  right toast views over any top-level view, making it incredibly versatile and powerful. Designed to be simple, lightweight, and
+                  user-friendly, SSToastMessage allows you to show popups with a single line of code. Enhance your app's user experience with seamless
+                  and stylish notifications.
                   DESC
     
   s.homepage = 'https://github.com/SimformSolutionsPvtLtd/SSToastMessage'
