@@ -1,4 +1,4 @@
-<a href="https://www.simform.com/"><img src="https://github.com/SimformSolutionsPvtLtd/SSToastMessage/blob/master/simformBanner.png"></a>
+![SSToastMessage Banner](banner.png)
 
 SSToastMessage
 =============
@@ -11,8 +11,15 @@ SSToastMessage
 [![PRs Welcome][PR-image]][PR-url]
 [![Twitter](https://img.shields.io/badge/Twitter-@simform-blue.svg?style=flat)](https://twitter.com/simform)
 
+Create Toast Views with Minimal Effort in SwiftUI Using SSToastMessage. SSToastMessage enables you to effortlessly add toast notifications, alerts, and floating messages to any view on both iPhone and macOS. With SSToastMessage, you can display left and right toast views over any top-level view, making it incredibly versatile and powerful. Designed to be simple, lightweight, and user-friendly, SSToastMessage allows you to show popups with a single line of code. Enhance your app's user experience with seamless and stylish notifications.
 
-SSToastMessage is written in SwiftUI. It will add toast, alert, and floating message view over the top of any view. It is intended to be simple, lightweight, and easy to use. It will be a popup with a single line of code.
+## Features
+
+- [x] Customisable toast view
+- [x] Multiple options for show toast view
+- [x] Cross-Platform (iOS & macOS)
+- [x] Flexible Positioning
+
 
 Screenshots
 ---------
@@ -25,7 +32,7 @@ Setup Instructions
 ------------------
 To integrate Toast-Swift into your Xcode project using CocoaPods, specify it in your `Podfile`:
 ```ruby
-pod 'SSToastMessage', '~> 1.0.0'
+pod 'SSToastMessage'
 ```
 and in your code add `import SSToastMessage`.
 
@@ -33,14 +40,18 @@ and in your code add `import SSToastMessage`.
 ------------------
 When using Xcode 11 or later, you can install `SSToastMessage` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
 
+         dependencies: [
+             .package(url: "https://github.com/SimformSolutionsPvtLtd/SSToastMessage.git", from: "1.0.0")
+         ]
 
 ## Manually
 
-1. Add `MessageView.swift`, `DispatchWorkHolder.swift` and `View+Extension.swift` to your project.
+1. Add `MessageView.swift`, `DispatchWorkHolder.swift`, `ViewModel.swift` and `View+Extension.swift` to your project.
 2. Grab yourself a cold 🍺.
 
 ## Requirements
-* iOS 13+
+* iOS 14+
+* macos 13+
 * Xcode 11+
 
 # Usage
@@ -98,7 +109,7 @@ struct ContentView: View {
                 }
             }.padding(15)
         }
-        .frame(width: UIScreen.main.bounds.width, height: 110)
+        .frame(height: 110)
         .background(Color(red: 0.85, green: 0.65, blue: 0.56))
     }
 }
@@ -120,41 +131,37 @@ Way easy to customize!
 
 Element | Declaration | Description
 --------|-----------|-----
-type | `type: MessageType` | set type of view alert, toast and float.
+type | `type: MessageType` | set type of view alert, toast and floater, left toast view and right toast view.
 position | `position: Position` |  top or bottom (for default case it just determines animation direction).
 animation | `animation: Animation` | custom animation for message view sliding onto screen.
-autohideDuration | `autohideDuration: Double?` |  time after which message view should disappear.
+horizontalPadding | `horizontalPadding: Double?` | for adding horizontalPadding in toast view.
+duration | `duration: Double?` |  time after which message view should disappear.
 closeOnTap | `closeOnTap: Bool` | on message view tap it should disappear.
-onTap | `onTap: () -> Void` | on message view tap perform any action or navigation.
 closeOnTapOutside | `closeOnTapOutside: Bool` | on outside tap message view should disappear.
+onTap | `onTap: () -> Void` | on message view tap perform any action or navigation.
+onToastHide | `onToastHide: () -> Void` | on toast hide perform any action.
 
 
 See the demo project for more examples.
 
-<h3><a href="https://github.com/SimformSolutionsPvtLtd"><u>🗂 Check out our other libraries→</u></a></h3>
+## 🤝 How to Contribute
+
+Whether you're helping us fix bugs, improve the docs, or a feature request, we'd love to have you! :muscle:
+
+Check out our [**Contributing Guide**](CONTRIBUTING.md) for ideas on contributing.
+
+## Find this example useful? ❤️
+
+Give a ⭐️ if this project helped you!
+
+## Check out our other Libraries
+
+<h3><a href="https://github.com/SimformSolutionsPvtLtd/Awesome-Mobile-Libraries"><u>🗂 Simform Solutions Libraries→</u></a></h3>
 
 
 ## MIT License
 
-Copyright (c) 2020 Simform Solutions
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 [PR-image]:https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat
 [PR-url]:http://makeapullrequest.com

@@ -1,9 +1,8 @@
 //
 //  ContentView.swift
-//  SSToastMessage
+//  SSToastMessageExample
 //
-//  Created by Ankit Panchal on 08/09/20.
-//  Copyright © 2020 Simform Solution Pvt. Ltd. All rights reserved.
+//  Created by Yagnik Bavishi on 01/05/24.
 //
 
 import SwiftUI
@@ -35,12 +34,16 @@ struct ContentView: View {
     let bottomToastColor = Color(hex: "bfdcae")
     let topFloatColor = Color(hex: "61A117")
     let bottomFloatColor = Color(hex: "3d5a80")
+    let leftRightToastColor = Color(hex: "85adad")
 
     @State var showAlert = false
     @State var showTopToast = false
     @State var showBottomToast = false
     @State var showTopFloater = false
     @State var showBottomFloater = false
+    @State var showDemoView = false
+    @State var showLeftToastView = false
+    @State var showRightToastView = false
 
     func dismissAll() {
         self.showAlert = false
@@ -48,9 +51,27 @@ struct ContentView: View {
         self.showBottomToast = false
         self.showTopFloater = false
         self.showBottomFloater = false
+        self.showLeftToastView = false
+        self.showRightToastView = false
     }
 
     var body: some View {
+        
+        if #available(iOS 16.0, *, macOS 13.0) {
+            NavigationStack {
+                content
+                    .navigationDestination(isPresented: $showDemoView, destination: {
+                        DemoView()
+                    })
+            }
+        } else {
+            NavigationView {
+                content
+            }
+        }
+    }
+    
+    private var content: some View {
         GeometryReader { geometryProxy in
             VStack {
                 VStack(spacing: 30) {
@@ -59,35 +80,60 @@ struct ContentView: View {
                     MyButtonView(showing: self.$showBottomToast, title: "Bottom Toast", hideAll: self.dismissAll)
                     MyButtonView(showing: self.$showTopFloater, title: "Top Floater", hideAll: self.dismissAll)
                     MyButtonView(showing: self.$showBottomFloater, title: "Bottom Floater", hideAll: self.dismissAll)
+                    MyButtonView(showing: self.$showLeftToastView, title: "Left Toast", hideAll: self.dismissAll)
+                    MyButtonView(showing: self.$showRightToastView, title: "Right Toast", hideAll: self.dismissAll)
                 }
                 
 
-                .present(isPresented: self.$showAlert, type: .alert, animation: Animation.interactiveSpring(), autohideDuration: nil, closeOnTap: false) {
+                .present(isPresented: self.$showAlert, type: .alert, animation: Animation.interactiveSpring(), duration: nil, closeOnTap: false) {
                     self.createAlertView()
                 }
                     
-                .present(isPresented: self.$showTopToast, type: .toast, position: .top, onTap: {print("on toast tap")}) {
+                .present(isPresented: self.$showTopToast, type: .toast, position: .top, duration: 6.0, onTap: {
+                    showDemoView = true
+                }, onToastDismiss: {
+                    print("on toast hide")
+                }) {
                     self.createTopToastView()
                 }
-                .present(isPresented: self.$showBottomToast, type: .toast, position: .bottom, onTap: {print("on toast tap")}) {
+                .present(isPresented: self.$showBottomToast, type: .toast, position: .bottom, onTap: {
+                    showDemoView = true
+                }) {
                     self.createBottomToastView()
                 }
-                .present(isPresented: self.$showTopFloater, type: .floater(), position: .top, animation: Animation.spring(), onTap: {print("on toast tap")}) {
+                .present(isPresented: self.$showTopFloater, type: .floater(), position: .top, animation: Animation.spring(), horizontalPadding: 60, onTap: {
+                    showDemoView = true
+                }) {
                     self.createTopFloaterView()
                 }
-                .present(isPresented: self.$showBottomFloater, type: .floater(), position: .bottom,animation: Animation.spring(), autohideDuration: nil, onTap: {print("on toast tap")}) {
+                .present(isPresented: self.$showBottomFloater, type: .floater(), position: .bottom,animation: Animation.spring(), duration: 3, onTap: {
+                    showDemoView = true
+                }) {
                     self.createBottomFloaterView()
                 }
-                
+                .present(isPresented: $showLeftToastView, type: .leftToastView, position: .bottom, duration: 3, onTap: {
+                    showDemoView = true
+                }) {
+                    self.createLeftToastView()
                 }
+                           
+                .present(isPresented: $showRightToastView, type: .rightToastView, position: .top, duration: 3, onTap: {
+                    showDemoView = true
+                }) {
+                    self.createRightToastView()
+                }
+                
+            }
+            NavigationLink(destination: DemoView(), isActive: $showDemoView) {
+                EmptyView()
+            }
             .frame(width: geometryProxy.size.width, height: geometryProxy.size.height)
-            
         }
+        .ignoresSafeArea()
+        .navigationViewStyle(.automatic)
         .background(self.bgColor)
-        .edgesIgnoringSafeArea(.all)
-             
-
-
+        .buttonStyle(.plain)
+        .ignoresSafeArea()
     }
 
     func createAlertView() -> some View {
@@ -157,13 +203,13 @@ struct ContentView: View {
                 }
             }.padding(15)
         }
-        .frame(width: UIScreen.main.bounds.width, height: 130)
+        .frame(height: 130)
         .background(self.topToastColor)
     }
 
     func createBottomToastView() -> some View {
         VStack {
-            HStack() {
+            HStack(alignment: .center) {
                 Image("pizza")
                     .resizable()
                     .aspectRatio(contentMode: ContentMode.fill)
@@ -181,10 +227,9 @@ struct ContentView: View {
                         .foregroundColor(Color(hex: "206a5d"))
                 }
             }
-            Spacer(minLength: 10)
         }
         .padding(15)
-        .frame(width: UIScreen.main.bounds.width, height: 100)
+        .frame(maxWidth: .infinity, maxHeight: 100)
         .background(self.bottomToastColor)
     }
 
@@ -217,7 +262,7 @@ struct ContentView: View {
                 }
             }.padding(15)
         }
-        .frame(width: UIScreen.main.bounds.width - 60, height: 110)
+        .frame(height: 110)
         .background(self.topFloatColor)
         .cornerRadius(15)
     }
@@ -246,13 +291,47 @@ struct ContentView: View {
         .background(self.bottomFloatColor)
         .cornerRadius(20.0)
     }
+    
+    func createLeftToastView() -> some View {
+        HStack {
+            Text("Left Toast View!!")
+                .lineLimit(2)
+                .font(.system(size: 18))
+                .foregroundColor(.white)
+                .font(.title)
+            Image("leftToastImage")
+                .resizable()
+                .aspectRatio(contentMode: ContentMode.fill)
+                .frame(width: 60, height: 60)
+                .cornerRadius(10.0)
+        }
+        .frame(width: 200, height: 90)
+        .background(self.leftRightToastColor)
+        .cornerRadius(15)
+    }
+    
+    func createRightToastView() -> some View {
+        HStack {
+            Image("rightToastImage")
+                .resizable()
+                .aspectRatio(contentMode: ContentMode.fill)
+                .frame(width: 60, height: 60)
+                .cornerRadius(10.0)
+            Text("Right Toast View!!")
+                .lineLimit(2)
+                .font(.system(size: 18))
+                .foregroundColor(.white)
+                .font(.title)
+        }
+        .frame(width: 200, height: 90)
+        .background(self.leftRightToastColor)
+        .cornerRadius(15)
+    }
 
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }
 
 extension Color {
@@ -268,5 +347,3 @@ extension Color {
         self.init(red: Double(r) / 0xff, green: Double(g) / 0xff, blue: Double(b) / 0xff)
     }
 }
-
-
